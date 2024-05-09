@@ -1,4 +1,5 @@
-package com.deliveryboy.dto;
+package com.enduser.dto;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,3 +15,4 @@ public class Location {
     private String locationName;
     private  String deliveryBoyName;
 }
+

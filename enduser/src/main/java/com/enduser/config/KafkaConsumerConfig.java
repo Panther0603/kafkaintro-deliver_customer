@@ -1,5 +1,6 @@
 package com.enduser.config;
 
+import com.enduser.dto.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
@@ -20,8 +21,7 @@ public class KafkaConsumerConfig {
     }
 
     @KafkaListener(topics = AppConstant.DELIVERY_LOCATION_UPDATE,groupId = AppConstant.GROUP_ID)
-    public void updatedLocation(Object value){
-
-        logger.info("Now the data are coming the realtime from the kafaka listener  "+value);
+    public void updatedLocation(Location value){
+        logger.info("Now the data are coming the realtime from the kafaka listener  "+value.toString());
     }
 }
