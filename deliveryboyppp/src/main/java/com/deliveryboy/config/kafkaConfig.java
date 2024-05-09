@@ -12,4 +12,10 @@ public class kafkaConfig {
     public NewTopic createNewTopic(){
         return TopicBuilder.name(AppConstant.LOCATION_TOPIC).build();
     }
+
+
+    @Bean
+    public NewTopic createNewTopicNewTopic(){
+        return TopicBuilder.name(AppConstant.DELIVERY_LOCATION_UPDATE).build();
+    }
 }

@@ -24,4 +24,10 @@ public class LocationController {
         kafkaService.updateLocation(location.getLocationName());
         return new ResponseEntity<>(Map.of("Message","Location Updated"), HttpStatus.OK);
     }
+
+    @PostMapping("/currentLocationDeliveryBoy")
+    public ResponseEntity<?> sendLocationUpdateDeliverBoy(@RequestBody Location location){
+        kafkaService.updateLocation(location.getLocationName(),location.getDeliveryBoyName());
+        return new ResponseEntity<>(Map.of("Message"," Updated location "+location.getLocationName()+" of deliver boy :-->"+location.getDeliveryBoyName()), HttpStatus.OK);
+    }
 }
